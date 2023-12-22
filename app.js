@@ -34,6 +34,10 @@ function playText(text) {
 	speechSynthesis.speak(utterance);
 }
 
+function pauseText() {
+	if (speechSynthesis.speaking) speechSynthesis.pause();
+}
+
 function stopText() {
 	speechSynthesis.resume();
 	speechSynthesis.cancel();
